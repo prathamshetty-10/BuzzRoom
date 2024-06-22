@@ -33,16 +33,16 @@ function Chat({socket,username,room}){
           setMessageList((list) => [...list, data]);
         });
       }, [socket]); //whenever there is change in socket the above function happens
-    return <div>
-    <div className="chat-header">
+    return <div className="h-[70vh] w-[60vw] bg-gray-300 rounded-3xl p-[10px]">
+    <div className="h-[50px] font-bold text-2xl  border-b-2 border-black text-black mx-[100px] px-[300px]">
         <p>Live chat</p>
     </div>
-    <div className="chat-body">
+    <div className=" h-[48vh] overflow-y-scroll">
     <ScrollToBottom className="message-container">
     {messageList.map((messageContent) => {
       return (
         <div
-          className="message"
+          className="h-auto w-[300px] bg-yellow-500"
           id={username === messageContent.author ? "you" : "other"}
         >
           <div>
@@ -60,9 +60,9 @@ function Chat({socket,username,room}){
   </ScrollToBottom>
     
     </div>
-    <div className="chat-footer"></div>
-        <input type="text" value={currMessage} placeholder="send a message" onChange={handle}/>
-        <button onClick={sendMessage}>&#9658;</button>
+    <div className="h-[40px]"></div>
+        <input type="text" value={currMessage} placeholder="send a message" className="h-[50px] w-[40vw] ml-[70px] bg-transparent border-black text-black rounded-3xl border-2 px-[40px]" onChange={handle}/>
+        <button onClick={sendMessage} className="w-[10vw] h-[50px] bg-yellow-500 text-black font-bold text-xl mx-[30px] rounded-3xl border-2 border-black hover:bg-yellow-300">Send</button>
     
     
     </div>
