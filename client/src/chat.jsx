@@ -4,6 +4,7 @@ import ScrollToBottom from "react-scroll-to-bottom";
 function Chat({socket,username,room}){
     const [currMessage,setCurrmessage]=useState("");
     const [messageList, setMessageList] = useState([]);
+    
     function handle(e){
         const {value}=e.target;
         setCurrmessage(value);
@@ -38,23 +39,39 @@ function Chat({socket,username,room}){
         <p>Live chat</p>
     </div>
     <div className=" h-[48vh] overflow-y-scroll">
-    <ScrollToBottom className="message-container">
+    <ScrollToBottom className="h-[48vh]">
     {messageList.map((messageContent) => {
-      return (
+      return username === messageContent.author ?(
         <div
-          className="h-auto w-[300px] bg-yellow-500"
+          className=" w-[350px]  text-black my-[10px] mx-[50px]"
           id={username === messageContent.author ? "you" : "other"}
         >
           <div>
-            <div className="message-content">
-              <p>{messageContent.message}</p>
+            <div className="message-content bg-[#576ce6] min-h-[30px] rounded-2xl px-[15px] py-[5px] break-normal">
+              <p className=" w-full break-words">{messageContent.message}</p>
             </div>
-            <div className="message-meta">
+            <div className="message-meta flex gap-4 px-[20px] ">
               <p id="time">{messageContent.time}</p>
               <p id="author">{messageContent.author}</p>
             </div>
           </div>
         </div>
+      ):(
+        <div
+          className=" w-[350px]  text-black my-[10px] ml-[510px]"
+          id={username === messageContent.author ? "you" : "other"}
+        >
+          <div>
+            <div className="message-content bg-[#576ce6] min-h-[30px] rounded-2xl px-[15px] py-[5px] break-normal">
+              <p className=" w-full break-words">{messageContent.message}</p>
+            </div>
+            <div className="message-meta flex gap-4 px-[20px] ">
+              <p id="time">{messageContent.time}</p>
+              <p id="author">{messageContent.author}</p>
+            </div>
+          </div>
+        </div>
+
       );
     })}
   </ScrollToBottom>
