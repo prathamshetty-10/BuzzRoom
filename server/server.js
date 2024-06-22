@@ -25,9 +25,10 @@ io.on("connection", (socket) => {
   });
 
   socket.on("send_message", (data) => {
-    socket.to(data.room).emit("receive_message", data);
+    
+    socket.to(data.room).emit("receive_message", data);//now server is emitting
   });
-
+  //even on refresh it disconnects and connects back
   socket.on("disconnect", () => {
     console.log("User Disconnected", socket.id);
   });
