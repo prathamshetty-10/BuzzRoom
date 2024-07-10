@@ -24,7 +24,7 @@
 ## Demo 😍😍
 
 - https://drive.google.com/file/d/1moaAxyPO_dae4tKQut17GB5E8Wp7qpwf/view?usp=sharing
- <iframe width="560" height="315" src="https://www.youtube.com/embed/SXxsO3mqNG0?si=RgecAUXP4DZ4x-ou" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 
 
