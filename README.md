@@ -24,6 +24,8 @@
 ## Demo 😍😍
 
 - https://drive.google.com/file/d/1moaAxyPO_dae4tKQut17GB5E8Wp7qpwf/view?usp=sharing
+- -![course](https://github.com/prathamshetty-10/BuzzRoom/assets/123003596/9d099e47-8c2b-4745-a6f6-15fbb9dbf441)
+
 
 
 
